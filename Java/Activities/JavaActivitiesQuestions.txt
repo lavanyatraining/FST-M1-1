@@ -1,0 +1,378 @@
+Java Activity Questions
+
+1.Activity 1
+
+Create 2 Classes, Activity1 and Car in your activities package.
+The Car class will not have the main() method.
+In the Car class, add these variables:
+A String color
+A String transmission
+An int make
+An int tyres
+An int doors
+Make a constructor to initialize tyres to 4 and doors to 4
+Create these methods:
+displayCharacteristics() - This displays the values of all the variables
+accelarate() - This prints "Car is moving forward."
+brake() - This prints "Car has stopped."
+
+In the class Activity1, create an Object of the Car class
+Initialize the values of
+make to 2014
+color to "Black"
+transmission to "Manual"
+Call the methods in the Car class to print the characteristics of the car, and what happens when you accelerate() and brake().
+
+2.Activity 2
+In this activity, we are writing a program to check if the sum of all the 10's in the array is exactly 30.
+
+The program returns false if the condition does not satisfy, otherwise returns true.
+
+Instructions:
+
+Add a Class named Activity2.
+In the main() method:
+Initialize an array with 6 number: [10, 77, 10, 54, -11, 10]
+Find the 10's in the array and add them
+Check if value is equal to 30.
+
+3.Activity 3
+Given an age in seconds, calculate how old someone would be on:
+
+Earth: orbital period 365.25 Earth days, or 31557600 seconds
+Mercury: orbital period 0.2408467 Earth years
+Venus: orbital period 0.61519726 Earth years
+Mars: orbital period 1.8808158 Earth years
+Jupiter: orbital period 11.862615 Earth years
+Saturn: orbital period 29.447498 Earth years
+Uranus: orbital period 84.016846 Earth years
+Neptune: orbital period 164.79132 Earth years
+So if you were told someone were 1,000,000,000 seconds old, you should be able to say that they're 31.69 Earth-years old.
+
+Add a class named Activity3.
+In the main() method:
+Create a variable named seconds and initialize it to 1000000000
+Create variables to store the time of all planets (MercurySeconds, VenusSeconds, etc.)
+Calculate the age on all the planets and print them.
+
+double seconds = 1000000000;
+
+double EarthSeconds = 31557600;
+double MercurySeconds = 0.2408467;
+double VenusSeconds = 0.61519726;
+double MarsSeconds = 1.8808158;
+double JupiterSeconds = 11.862615;
+double SaturnSeconds = 29.447498;
+double UranusSeconds = 84.016846;
+double NeptuneSeconds = 164.79132;
+
+4.Activity 4
+In this activity, we will be implementing the Insertion Sort algorithm
+
+
+Insertion sort works in the similar way as we sort cards in our hand in a card game.
+We assume that the first card is already sorted then, we select an unsorted card.
+If the unsorted card is greater than the card in hand, it is placed on the right otherwise, to the left.
+In the same way, other unsorted cards are taken and put at their right place.
+
+Add a class named Activity4.
+In the main() method:
+Initialize an array with numbers in random order
+Use the insertion sort logic to sort the array in ascending order.
+Display the array before and after sorting.
+
+Psuedocode for Insertion sort:
+
+insertionSort(array)
+    mark first element as sorted
+    for each unsorted element X
+        'extract' the element X
+    for j <- lastSortedIndex down to 0
+        if current element j > X
+            move sorted element to the right by 1
+    break loop and insert X here
+end insertionSort
+
+5.Activity 5
+In this activity we use the Abstract Class to show implementation of Abstraction.
+
+For this activitiy:
+
+Create an abstract class Book that has:
+title of type String
+an abstract method setTitle() that takes one String argument.
+a concrete method getTitle() that returns the value of title.
+Create another class that extends the abstract class called MyBook.
+MyBook defines the setTitle() method to assign the value of title as the argument.
+public void setTitle(String s) {
+    title = s;
+}
+
+In the main method, create an object of MyBook class - newNovel.
+Use the setTitle() method to book title to the variable title.
+Use the getTitle() method to print the name of the book
+//Set title
+newNovel.setTitle(title);
+
+//Print result
+System.out.println("The title is: " + newNovel.getTitle());
+
+6.Activity 6
+In this activity we show implementation of Encapsulation.
+
+There is a plane that can onboard passengers. Whenever plane takes off the date of taking off has to be updated. Same with landing.
+
+Below is an implementation where everything is public, there are no methods and every operation requires changing the fields directly.
+
+Our job is to make this implementation OOP friendly.
+
+class Plane {
+    public List<String> passengers;
+    public int maxPassengers;
+    public Date lastTimeTookOf;
+    public Date lastTimeLanded;
+}
+
+Start by creating a class called Plane.
+Add a constructor that initializes the values of maxPassengers and the array passengers to an empty array.
+Change the access modifier of the four variables to private.
+Add the following methods to the Plane class:
+onboard(): add passengers to the array using the add() method
+takeOff(): returns the current date and time
+land(): sets the value of lastTimeLanded to the current date and time. Also clear() the array.
+getLastTimeLanded(): returns the value of lastTimeLanded.
+getPassesngers(): returns the array of passengers.
+
+
+Create another class named Activity6. In this class we will have our main method.
+First create an object of the Plane class named plane. Set the maxPassengers value to 10 by passing it to the constructor.
+Add names to the passengers list using the onboard method.
+Print the take-off time using the takeOff() method.
+Print the list of passengers using the getPassengers() method.
+Add a Thread.sleep() method to pause execution for 5 seconds. This is to emulate plane in flight.
+Land() the plane and print the time of landing using getLastTimeLanded() method.
+
+7.Activity 7
+In this activity we will be implementing Hybrid Inheritance (Multiple and Simple)
+
+Start by creating two interfaces - BicycleParts and BicycleOperations
+In BicycleParts:
+public int gears: number of gears on the bicycle
+public int speed: max speed of bicycle
+In BicycleOperations:
+public applyBrake(int decrement): how much to slow down the bicycle by.
+public speedUp(int increment): how much to speed up the bicycle by.
+
+Next create the base class Bicycle. It implements both interfaces BicycleParts, BicycleOperations.
+Initialize the values of gears and currentSpeed in a constructor.
+Write the definition of the applyBrake() and speedUp().
+applyBrake() reduces the currentSpeed by the number passed to the method.
+speedUp() increases the currentSpeed by the number passed to the method.
+Add another method to the base class - bicycleDesc().
+It prints the number of gears and the currentSpeed of the bicycle.
+public String bicycleDesc() {
+    return("No of gears are "+ gears + "\nSpeed of bicycle is " + currentSpeed);
+}
+
+Now create a derived class, MountainBike that extends Bicycle.
+
+This class adds another property: seatHeight.
+In the constructor for MountainBike, use the super keyword to include gears and currentSpeed for this class. Also initialize seatHeight.
+Add setHeight() method to the class to add a new value for the seatHeight variable.
+public void setHeight(int newValue) {
+    seatHeight = newValue;
+}
+Override the bicycleDesc() method of the super class to print the seat height also.
+
+Finally we make the driver class that contains the main method.
+Create an object for the MountainBike class.
+Use this object to access the different variables and methods.
+public static void main(String args[]) {
+    MountainBike mb = new MountainBike(3, 0, 25);
+    System.out.println(mb.bicycleDesc());
+    mb.speedUp(20);
+    mb.applyBrake(5);
+}
+
+8.Activity 8
+In this activity, we create a custom Exception handler.
+
+Create a class named CustomException that extends the Exception class.
+Add a private String variable named message that is going to be the exception message.
+Add constructor that initializes the message variable with the custom String passed in.
+Add an Override annotation for getMessage() that returns the custom message.
+@Override
+public String getMessage() {
+    return message;
+}
+
+
+Activity 8
+Now create the main class that contains the main function.
+
+Add a method to this class called exceptionTest() that will throw the CustomException if the string value is null. Otherwise, it simply prints the string.
+In the main method, call the exceptionTest() method with a non-null string and also a method call with a null argument.
+In the catch block, add a print statement to print the custom error message.
+CustomExceptionActivity.exceptionTest("Will print to console");
+CustomExceptionActivity.exceptionTest(null);
+
+9.Activity 9
+In this exercise,
+
+Create an ArrayList named myList of type String.
+Add 5 names to the ArrayList using add() method.
+Then print all the names using for loop.
+Then use get() method to retrieve the 3rd name in the ArrayList.
+Use contains() method to check if a name exists in the ArrayList.
+Use size() method to print the number of names in the ArrayList.
+Use remove() method to remove a name from the list and print the size() of the list again.
+
+ArrayList methods:
+
+public void add(Object) public void add(int, Object)	Adds an item to an ArrayList. The default version adds an item at the next available location. The overloaded version allows you to specify a position at which to add the item.
+ 
+public void remove(int)	Removes an item from an ArrayList at a specified location.
+public void set(int, Object)	Alters an item at a specified ArrayList location.
+Object get(int)	Retrieves an item from a specified location in an ArrayList.
+public int size()	Returns the current ArrayList size.
+
+10.Activity 10
+In this exercise,
+
+Create a HashSet named hs.
+Add 6 objects using add() method to the HashSet.
+Then print the size of the HashSet using the size() method.
+Remove an element using the remove() method.
+Also try to remove an element that is not present in the Set.
+Use the contains() method to check if an item is in the Set or not.
+Print the updated set.
+
+HashSet methods:
+
+public boolean add(Object o)	Adds an object to a HashSet if already not present in HashSet.
+public boolean remove(Object o)	Removes an object from a HashSet if found in HashSet.
+public boolean contains(Object o)	Returns true if object found else return false
+public boolean isEmpty()	Returns true if HashSet is empty else return false
+public int size()	Returns number of elements in the HashSet
+
+11.Activity 11
+In this exercise,
+
+Create a Map named colours with integer keys and String values.
+Add 5 random colours to it and print the Map to the console.
+Remove one colour using the remove() method.
+Check if the colour green exists in the Map using the containsValue() method.
+Print the size of the Map using the size() method.
+
+12.Activity 12
+In this activity, we will be creating a functional interface and use it with a lambda expression.
+Create an interface named Addable that contains a single method, add(). This method accepts two arguments, num1 and num2.
+Next, create a class named Activity12 with a main method.
+In this main method, create two variables, both of type Addable(the interface).
+One variable, say ad1, contains a lambda expression(no body), that saves the result of num1 plus num2.
+The other variable, say ad2, contains a lambda function(has a body), that also saves the result of num1 plus num2.
+
+Activity 12
+Hint:
+
+For ad1, use the following lambda expression:
+Addable ad1 = (a, b) -> (a + b);
+For ad2, use the following lambda function:
+Addable ad2 = (int a, int b) -> {
+    return (a + b);
+};
+
+13.Activity 13
+In this activity, accept number inputs from the console using Scanner class and store them in an array.
+Then use the Random class to generate an index value and print the value in the array at then generated index value.
+To start create a class RandomScannerActivity with a main() method with the following objects:
+Create a Scanner object named scan.
+Create an ArrayList object named list.
+Create a Random class object named indexGen.
+
+Add a scan statement with nextInt() to accept only integer values, inside a loop to accept multiple values.
+Use the hasNextInt() method with the loop to ensure only integer values are accepted.
+Example:
+while(scan.hasNextInt()) {
+    list.add(scan.nextInt());
+}
+
+13.To print the number from an array, we convert the ArrayList into an array using the toArray() method
+Create an array as shown below:
+Integer nums[] = list.toArray(new Integer[0]);
+Use indexGen to generate an integer value with the bounds set to the length of nums array.
+Print the index value that was generated and the value in the array at that index value.
+
+14.Activity 14
+In this activity we use FileUtils to perform file I/O operations.
+
+Create a new text file using the default File Class.
+Use the createNewFile() method to create a file.
+Write some text into the text file.
+File file = new File("filepath");
+boolean fStatus = file.createNewFile();
+
+
+Use the FileUtils.getFile() method to get the file object.
+To read the file the method is readFileToString().
+//get the file Object
+File fileUtil = FileUtils.getFile("filepath");
+//Read file
+System.out.println("Data in file: " + FileUtils.readFileToString(fileUtil, "UTF8"));
+Next, we create a new directory named resources.
+Copy the text file into this directory using the copyFileToDirectory() method.
+//Create directory
+File destDir = new File("resources");
+//Copy file to directory
+FileUtils.copyFileToDirectory(file, destDir);
+
+To read data from this new file using FileUtils class use the getFile() method to get the file. Then use readFileToString() to read file.
+//Get file from new directory
+File newFile = FileUtils.getFile(destDir, "newfile.txt");
+//Read data from file
+String newFileData = FileUtils.readFileToString(newFile, "UTF8");
+
+15.In the main function, create an object for XSSFWorkbook class. This object that will be used to create the Excel sheets.
+Create an object for the XSSFSheet class as well. Initialize it as shown below.
+XSSFWorkbook workbook = new XSSFWorkbook();
+XSSFSheet sheet = workbook.createSheet("Datatypes in Java");
+
+Next we create the data that will inserted into the sheet.
+
+The data is input as a 2D array of objects.
+Each row is one object and each item in that object counts as column value.
+Example: (This is the format of the sample data that we will be pushing to the Excel sheet.)
+Object[][] datatypes = {
+    {"Datatype", "Type", "Size(in bytes)"},
+    {"int", "Primitive", 2},
+    {"float", "Primitive", 4},
+    {"double", "Primitive", 8},
+    {"char", "Primitive", 1},
+    {"String", "Non-Primitive", "No fixed size"}
+};
+
+Initialize an integer with 0 (zero). This will be the row number index value.
+Create the following loop to insert data into each cell:
+int rowNum = 0;
+
+for (Object[] datatype : datatypes) {
+    Row row = sheet.createRow(rowNum++);
+    int colNum = 0;
+    for (Object field : datatype) {
+        Cell cell = row.createCell(colNum++);
+        if (field instanceof String) {
+            cell.setCellValue((String) field);
+        } else if (field instanceof Integer) {
+            cell.setCellValue((Integer) field);
+        }
+    }
+}
+
+Finally in a try block,
+
+Create a FileOutputStream object and pass in the FILE_NAME global variable.
+Use workbook.write() method with the FileOutputStream object to write to the Excel sheet specified.
+Create catch blocks for FileNotFoundException and for IOException.
+FileOutputStream outputStream = new FileOutputStream(FILE_NAME);
+workbook.write(outputStream);
+
