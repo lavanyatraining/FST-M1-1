@@ -1,0 +1,267 @@
+Activity 1
+
+User Inputs
+
+Using Python:
+
+Write a program that asks the user to enter their name and their age.
+Print out a message addressed to them that tells them the year that they will turn 100 years old.
+
+Activity 2
+
+Odd or Even Numbers
+
+Using Python:
+
+Ask the user for a number.
+Depending on what number they enter, tell them if the number is an even or odd number.
+
+Activity 3
+
+Rock-Paper-Scissors
+
+Using Python:
+
+Make a two-player Rock-Paper-Scissors game.
+Remember the rules:
+Rock beats scissors
+Scissors beats paper
+Paper beats rock
+
+Activity 4
+
+Rock-Paper-Scissors-2
+
+Using Loops:
+
+Enhance the previously written Rock-Paper-Scissors code so that it asks the user if they want to play another round.
+If they say 'Yes', the game should begin again.
+If they say 'No', the game should exit.
+
+Activity 5
+
+Multiplication Tables
+
+Using Loops:
+
+Write a Python program to create the multiplication table (from 1 to 10) of a number.
+
+Activity 6
+
+Pattern Generator
+
+Using Loops:
+
+Write a Python program to construct the following pattern, using a nested loop number.
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+
+Activity 7
+
+List Sum Calculator
+
+Write a Python program to calculate the sum of all the elements in a list.
+
+Bonus points if you can make the user enter their own list.
+
+Activity 8
+
+List Checker
+
+Given a list of numbers, return True if first and last number of a list is same.
+
+Bonus points if you can make the user enter their own list.
+
+Activity 9
+
+Combining Lists
+
+Given a two list of numbers create a new list such that new list should contain only odd numbers from the first list and even numbers from the second list.
+
+Activity 10
+
+Tuple Number Checker
+
+Given a tuple of numbers, iterate through it and print only those numbers which are divisible by 5
+
+Bonus points if you can make the user enter their own tuple.
+
+Activity 11
+
+Fruit Shop
+
+Create a Python dictionary that contains a bunch of fruits and their prices.
+
+Write a program that checks if a certain fruit is available or not.
+
+Activity 12
+
+Recursive Adder
+
+Write a recursive function to calculate the sum of numbers from 0 to 10
+
+Activity 13
+
+Adding List Numbers
+
+Write a function sum() such that it can accept a list of elements and print the sum of all elements
+
+Activity 14
+
+Fibonacci Numbers
+
+Using Recursion:
+
+Write a program that asks the user how many Fibonnaci numbers to generate and then generates them.
+
+ 
+Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …
+
+Activity 15
+
+Handling Errors
+
+Write a Python program that throws a NameError.
+
+Handle the error so it doesn't halt execution.
+
+Classes of Cars
+
+Activity 16
+
+Create a car class with the following details:
+
+Properties: manufacturer, model, make, transmission, color
+
+Methods: accelerate(), stop()
+
+accelerate() should print "{Manufacturer} {Model} is moving"
+
+stop() should print "{Manufacturer} {Model} has stopped"
+
+ 
+
+Using this car class, create 3 different car objects.
+
+Writing CSV Files
+
+Activity 17
+
+Using Pandas:
+
+Write the following data into a CSV file.
+
+Usernames	Passwords
+admin	password
+Charles	Charl13
+Deku	AllMight
+
+Activity 18
+
+Reading CSV Files
+
+Using Pandas:
+
+Read the CSV made in the previous program:
+
+Print the values only in the Usernames column
+Print the username and password of the second row
+Sort the Usernames column data in ascending order and print data
+Sort the Passwords column in descending order and print data
+Hint: You can use DataFrame.sort_values("column") to sort your data
+
+Hint: You can use DataFrame.sort_values("column", ascending=false) to sort your data in descending order.
+
+Activity 19
+
+Writing Excel Files
+
+Using Pandas:
+
+Write the following data into an excel file:
+
+FirstName	LastName	Email	PhoneNumber
+Satvik	Shah	satshah@example.com	4537829158
+Avinash	Kati	avinashk@example.com	5892184058
+Lahri	Rath	lahri.rath@example.com	4528727830
+
+Reading Excel Files
+
+Activity 20
+
+Using Pandas:
+
+Use pandas to read data the Excel file
+
+Print the number of rows and columns
+Print the data in the emails column only
+Sort the data based on FirstName in ascending order and print the data
+ 
+
+Hint: You can use DataFrame.shape to get the number of rows and columns
+
+Activity 21
+
+Calculator Test
+
+Using pytest:
+
+Create a new test file and write test to validate the following cases:
+
+Sum of two numbers
+Difference of two numbers
+Product of two numbers
+Quotient of two numbers
+
+Activity 22
+
+Subsets
+
+Using pytest:
+
+In the same file as the previous activity, do the following:
+
+Apply the marker 'activity' to the last 2 test methods.
+Run tests based on substring
+Run tests based using the 'activity' marker.
+
+Fixtures
+
+Activity 23
+
+Using pytest:
+
+Create a new test file and do the following:
+
+Create a fixture that initializes a list containing numbers from 0-10.
+Write a test method asserting that the sum of that list is 55
+Once you confirm that the test passes, move the fixture into the conftest.py file and rerun the test.
+
+Activity 24
+
+Parameterization
+Using pytest:
+
+Create a new test file and do the following:
+
+Create a fixture named wallet() that initializes the variable 'amount' with 0
+Create a test with the following parameters:
+
+ 
+Write a test that performs the following scenario with the parameters
+    My wallet initially has 0,
+    I add {earned} units of cash to the wallet,
+    I spend {spent} units of cash, and
+    I should have {expected} units of cash remaining after the two transactions.
+earned	spent	expected
+30	10	20
+20	2	18
+
+
