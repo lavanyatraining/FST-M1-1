@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="appiumProject">
+    <test name="appiumProjects">
+        <classes>
+           <!--   <class name="appiumProject.GoogleTask" />
+           <class name="appiumProject.GoogleKeep" />
+           <class name="appiumProject.GoogleKeepReminder" />-->
+            <class name="appiumProject.ToDoList" />
+             <!--  <class name="appiumProject.LoginForm" />
+            <class name="appiumProject.PopupsCard" /> -->
+        </classes>
+    </test>
+</suite>
